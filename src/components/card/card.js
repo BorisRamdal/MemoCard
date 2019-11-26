@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom';
 import './card.css';
 
-export default class Card extends Component {
+class Card extends Component {
     state = {
         open: false
     };
@@ -12,6 +13,7 @@ export default class Card extends Component {
         });
     };
     render() {
+        const {pathname} = this.props.location;
         return(
             <div className="card">
                 <div className="counter">{this.props.counter}</div>
@@ -21,8 +23,13 @@ export default class Card extends Component {
                         {this.state.open ? this.props.translation : '?'}
                     </span>
                 </div>
-                <button className="btn">Add to List</button>
+                {pathname === '/saved' ?
+                    <button className="btn">Remove</button> :
+                    <button className="btn">Add to List</button>
+                }
             </div>
         )
     }
 }
+
+export default withRouter(Card);

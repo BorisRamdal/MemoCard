@@ -1,8 +1,7 @@
 let initialState = {
-    index: true,
     activeRange: '101-200',
     activeList: {dog:"собака", cat:"кошка", mouse:"мышь", horse:"лошадь"},
-    savedCards: {mouse:"мышь", horse:"лошадь"},
+    savedList: {mouse:"мышь", horse:"лошадь"},
     progress: [
         {range: '1-100',   passed: true},
         {range: '101-200', passed: false},
