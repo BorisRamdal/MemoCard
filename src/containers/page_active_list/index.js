@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
-import Header from '../header/header';
-import Card from '../card/card';
+import Header from '../../components/header/header';
+import Card from '../../components/card/card';
 
 export default function () {
     return(

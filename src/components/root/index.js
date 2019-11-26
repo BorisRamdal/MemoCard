@@ -1,8 +1,8 @@
 import React, {Fragment} from 'react';
 import {Route} from 'react-router-dom';
-import ActiveList from '../page_active_list/';
-import SavedList from '../page_saved_list/';
-import Progress from '../page_progress/';
+import ActiveList from '../../containers/page_active_list/';
+import SavedList from '../../containers/page_saved_list/';
+import Progress from '../../containers/page_progress/';
 
 export default function () {
     return (
