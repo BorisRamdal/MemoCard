@@ -7,10 +7,10 @@ export default function () {
         <Fragment>
             <Header title="Saved Cards" index={false}/>
             <section className="saved-cards">
-                <Card counter="1" word="Sun"    translation="Солнце"/>
-                <Card counter="2" word="Spring" translation="Весна"/>
-                <Card counter="3" word="Fish"   translation="Рыба"/>
-                <Card counter="4" word="Beer"   translation="Пиво"/>
+                <Card word="Sun"    translation="Солнце"/>
+                <Card word="Spring" translation="Весна"/>
+                <Card word="Fish"   translation="Рыба"/>
+                <Card word="Beer"   translation="Пиво"/>
             </section>
         </Fragment>
     )

@@ -16,7 +16,6 @@ class Card extends Component {
         const {pathname} = this.props.location;
         return(
             <div className="card">
-                <div className="counter">{this.props.counter}</div>
                 <div className="title">{this.props.word}</div>
                 <div className="trans-box">
                     <span onClick={this.showTranslate}>
