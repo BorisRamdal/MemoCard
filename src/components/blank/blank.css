@@ -1,0 +1,20 @@
+.blank-page {
+    display: flex;
+    height: calc(100vh - 90px);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.blank-page span {align-self: flex-end;}
+.blank-page button {
+    align-self: flex-end;
+    border: 1px solid #dbdbdb;
+    background-color: #dbdbdb;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    color: #323232;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    margin-bottom: 10px;
+}
