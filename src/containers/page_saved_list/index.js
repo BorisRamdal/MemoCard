@@ -1,18 +1,29 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, Component} from 'react';
+import { connect } from 'react-redux';
 import Header from '../../components/header/header';
 import Card from '../../components/card/card';
 import Blank from '../../components/blank/blank';
 
-export default function () {
-    return(
-        <Fragment>
-            <Header title="Saved Cards" index={false}/>
-            <section className="saved-cards">
-                <Card word="Sun"    translation="Солнце"/>
-                <Card word="Spring" translation="Весна"/>
-                <Card word="Fish"   translation="Рыба"/>
-                <Card word="Beer"   translation="Пиво"/>
-            </section>
-        </Fragment>
-    )
+class SavedList extends Component {
+    render() {
+        let {savedList} = this.props;
+        return(
+            <Fragment>
+                <Header title="Saved Cards" index={false}/>
+                {
+                    !savedList ? <Blank/> :
+                    <section>
+                        {Object.keys(savedList).map((item) => (
+                            <Card word={item} translation={savedList[item]} key={item}/>
+                        ))}
+                    </section>
+                }
+            </Fragment>
+        )
+    }
 }
+export default connect(
+    state => ({
+        savedList: state.savedList,
+    })
+)(SavedList);

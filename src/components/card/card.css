@@ -7,15 +7,12 @@
 }
 .title {font-size: 24px; padding-top: 10px;}
 .trans-box {
-    height: 130px;
+    min-height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
     font-size: 15px;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
 }
 .trans-box span {
     padding: 20px;
