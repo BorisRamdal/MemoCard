@@ -6,5 +6,10 @@ let initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-    return state;
+    switch(action.type) {
+        case 'LOAD_DATA':
+            return {...state, activeList: action.payload};
+        default:
+            return state;
+    }
 }
