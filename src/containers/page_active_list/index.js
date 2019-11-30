@@ -5,16 +5,15 @@ import Card from '../../components/card/card';
 
 class ActiveList extends Component {
     render() {
-        let {activeList} = this.props;
+        let {activeList, savedList, addToSaveList} = this.props;
         return (
             <Fragment>
                 <Header title={this.props.activeRange} index={true}/>
                 <section>
-                    {
-                        !activeList ? 'Loading...' :
-                            Object.keys(activeList).map((item) => (
-                                <Card word={item} translation={activeList[item]} key={item}/>
-                            ))
+                    {!activeList ? 'Loading...' :
+                        Object.keys(activeList).filter(value => !Object.keys(savedList).includes(value)).map((item) => (
+                            <Card word={item} translation={activeList[item]} key={item} addtosave={addToSaveList}/>
+                        ))
                     }
                 </section>
             </Fragment>
@@ -24,6 +23,14 @@ class ActiveList extends Component {
 export default connect(
     state => ({
         activeRange: state.activeRange,
-        activeList: state.activeList
+        activeList: state.activeList,
+        savedList: state.savedList
+    }),
+    dispatch => ({
+        addToSaveList: (key, val)=>{
+            let obj = {};
+            obj[key] = val;
+            dispatch({type: 'ADD_TO_SAVELIST', payload: {...obj}})
+        }
     })
 )(ActiveList);

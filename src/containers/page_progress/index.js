@@ -12,8 +12,8 @@ class Progress extends Component {
                 <section>
                     {
                        !progress ? 'No progress data' :
-                        progress.map((item) => (
-                            <Range range={item.range} passed={item.passed} active={activeRange} key={item}/>
+                        progress.map((item, i) => (
+                            <Range range={item.range} passed={item.passed} active={activeRange} key={i}/>
                         ))
                     }
                 </section>

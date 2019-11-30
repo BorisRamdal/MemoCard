@@ -14,17 +14,18 @@ class Card extends Component {
     };
     render() {
         const {pathname} = this.props.location;
+        const {word, translation, addtosave, removefromsave } = this.props;
         return(
             <div className="card">
-                <div className="title">{this.props.word}</div>
+                <div className="title">{word}</div>
                 <div className="trans-box">
                     <span onClick={this.showTranslate}>
-                        {this.state.open ? this.props.translation : '?'}
+                        {this.state.open ? translation : '?'}
                     </span>
                 </div>
                 {pathname === '/saved' ?
-                    <button className="btn">Remove</button> :
-                    <button className="btn">Add to List</button>
+                    <button className="btn" onClick={()=> removefromsave(word)}>Remove</button> :
+                    <button className="btn" onClick={()=> addtosave(word, translation)}>Add to List</button>
                 }
             </div>
         )

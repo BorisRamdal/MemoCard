@@ -6,15 +6,15 @@ import Blank from '../../components/blank/blank';
 
 class SavedList extends Component {
     render() {
-        let {savedList} = this.props;
+        let {savedList, removeFromSaveList} = this.props;
         return(
             <Fragment>
                 <Header title="Saved Cards" index={false}/>
                 {
-                    !savedList ? <Blank/> :
+                    !Object.keys(savedList).length > 0 ? <Blank/> :
                     <section>
                         {Object.keys(savedList).map((item) => (
-                            <Card word={item} translation={savedList[item]} key={item}/>
+                            <Card word={item} translation={savedList[item]} key={item} removefromsave={removeFromSaveList}/>
                         ))}
                     </section>
                 }
@@ -25,5 +25,8 @@ class SavedList extends Component {
 export default connect(
     state => ({
         savedList: state.savedList,
+    }),
+    dispatch => ({
+        removeFromSaveList: (key)=>{dispatch({type: 'REMOVE_FROM_SAVELIST', payload: key})}
     })
 )(SavedList);
