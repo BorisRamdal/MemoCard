@@ -9,7 +9,7 @@ export default function Header(props) {
     return (
         <header>
             {props.index ?
-                <Link to="/progress"><img alt="" src={passed} /></Link> :
+                <Link to="/ranges"><img alt="" src={passed} /></Link> :
                 <Link to="/"><img alt="" src={back} /></Link>
             }
             <span>{props.title}</span>

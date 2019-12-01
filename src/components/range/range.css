@@ -1,16 +1,6 @@
 .range {
     line-height: 45px;
     border-bottom: 1px solid #dbdbdb;
-    padding: 0 15px 0 30px;
+    padding: 0 15px;
     font-size: 16px;
-    background: url("notpassed.png") left center no-repeat;
-    background-size: 20px;
-}
-.range.passed {
-    background: url("passed.png") left center no-repeat;
-    background-size: 20px;
-}
-.range.active {
-    background: url("active.png") left center no-repeat;
-    background-size: 20px;
 }

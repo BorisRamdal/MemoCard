@@ -3,17 +3,17 @@ import { connect } from 'react-redux';
 import Header from '../../components/header/header';
 import Range from '../../components/range/range';
 
-class Progress extends Component {
+class Ranges extends Component {
     render() {
-        const {progress, activeRange} = this.props;
+        const {ranges} = this.props;
         return(
             <Fragment>
-                <Header title="Your Progress" index={false}/>
+                <Header title="All ranges" index={false}/>
                 <section>
                     {
-                       !progress ? 'No progress data' :
-                        progress.map((item, i) => (
-                            <Range range={item.range} passed={item.passed} active={activeRange} key={i}/>
+                       !ranges ? 'No ranges data' :
+                        ranges.map((item, i) => (
+                            <Range range={item} key={i}/>
                         ))
                     }
                 </section>
@@ -23,7 +23,6 @@ class Progress extends Component {
 }
 export default connect (
     state => ({
-        activeRange: state.activeRange,
-        progress: state.progress
+        ranges: state.ranges
     })
-)(Progress);
+)(Ranges);

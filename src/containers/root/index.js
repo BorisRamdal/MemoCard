@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {Route} from 'react-router-dom';
 import ActiveList from '../page_active_list/index';
 import SavedList from '../page_saved_list/index';
-import Progress from '../page_progress/index';
+import Ranges from '../page_ranges/index';
 import loadDataHandler from '../../actions/loadData';
 
 class Root extends Component {
@@ -15,7 +15,7 @@ class Root extends Component {
             <Fragment>
                 <Route exact path="/" component={ActiveList} />
                 <Route path="/saved" component={SavedList} />
-                <Route path="/progress" component={Progress} />
+                <Route path="/ranges" component={Ranges} />
             </Fragment>
         )
     }
