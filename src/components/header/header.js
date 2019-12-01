@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import add from './add.png';
-import passed from './passed.png';
+import menu from './menu.png';
 import back from './back.png';
 import './header.css';
 
@@ -9,7 +9,7 @@ export default function Header(props) {
     return (
         <header>
             {props.index ?
-                <Link to="/ranges"><img alt="" src={passed} /></Link> :
+                <Link to="/ranges"><img alt="" src={menu} /></Link> :
                 <Link to="/"><img alt="" src={back} /></Link>
             }
             <span>{props.title}</span>

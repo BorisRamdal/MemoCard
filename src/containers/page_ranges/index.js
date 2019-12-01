@@ -5,7 +5,7 @@ import Range from '../../components/range/range';
 
 class Ranges extends Component {
     render() {
-        const {ranges} = this.props;
+        const {activeRange, ranges} = this.props;
         return(
             <Fragment>
                 <Header title="All ranges" index={false}/>
@@ -13,7 +13,7 @@ class Ranges extends Component {
                     {
                        !ranges ? 'No ranges data' :
                         ranges.map((item, i) => (
-                            <Range range={item} key={i}/>
+                            <Range range={item} activerange={activeRange} key={i}/>
                         ))
                     }
                 </section>
@@ -23,6 +23,7 @@ class Ranges extends Component {
 }
 export default connect (
     state => ({
+        activeRange: state.activeRange,
         ranges: state.ranges
     })
 )(Ranges);
