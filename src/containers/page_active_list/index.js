@@ -5,15 +5,15 @@ import Card from '../../components/card/card';
 
 class ActiveList extends Component {
     render() {
-        let {dataList, addToSaveList} = this.props;
-        console.log(this.props);
+        let {dataList, addToSaveList, activeRange, savedList} = this.props;
+        let activeList = dataList && dataList.filter(value => value.range === activeRange)[0].words;
         return (
             <Fragment>
-                <Header title={this.props.activeRange} index={true}/>
+                <Header title={activeRange} index={true}/>
                 <section>
                     {!dataList ? 'Loading...' :
-                        dataList.filter(value => value.range === this.props.activeRange).map((item) => (
-                            <Card word="the" translation="этот" key={item} addtosave={addToSaveList}/>
+                        Object.keys(activeList).filter(value => !Object.keys(savedList).includes(value)).map((item) => (
+                            <Card word={item} translation={activeList[item]} key={item} addtosave={addToSaveList}/>
                         ))
                     }
                 </section>
