@@ -8,7 +8,7 @@ import loadDataHandler from '../../actions/loadData';
 
 class Root extends Component {
     componentDidMount(){
-        this.props.loadData(this.props.activeRange);
+        this.props.loadData();
     }
     render(){
         return (
@@ -21,12 +21,8 @@ class Root extends Component {
     }
 }
 export default connect (
-    state => ({
-        activeRange: state.activeRange,
-    }),
+    null,
     dispatch => ({
-        loadData : (activeRange)=>{
-            dispatch(loadDataHandler(activeRange));
-        }
+        loadData : ()=>{dispatch(loadDataHandler())}
     })
 )(Root)
