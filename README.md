@@ -1,2 +1,2 @@
 # MemoCard (PWA)
-Over 5000+ cards sorted by frequency.
+Over 3000+ cards sorted by frequency.
