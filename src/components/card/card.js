@@ -25,7 +25,7 @@ class Card extends Component {
                 </div>
                 {pathname === '/saved' ?
                     <button className="btn" onClick={()=> removefromsave(word)}>Remove</button> :
-                    <button className="btn" onClick={()=> addtosave(word, translation)}>Add to List</button>
+                    <button className="btn" onClick={()=> addtosave(word, translation)}>Add</button>
                 }
             </div>
         )

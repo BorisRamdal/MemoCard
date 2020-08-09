@@ -9,7 +9,7 @@ class SavedList extends Component {
         let {savedList, removeFromSaveList} = this.props;
         return(
             <Fragment>
-                <Header title="Saved Cards" index={false}/>
+                <Header title="Learned words" index={false}/>
                 {
                     !Object.keys(savedList).length > 0 ? <Blank/> :
                     <section>

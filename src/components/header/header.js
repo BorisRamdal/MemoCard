@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import add from './add.png';
 import menu from './menu.png';
 import back from './back.png';
+import clear from './clear.png';
 import './header.css';
 
 export default function Header(props) {
@@ -15,7 +16,7 @@ export default function Header(props) {
             <span>{props.title}</span>
             {props.index ?
                 <Link to="/saved"><img alt="" src={add} /></Link> :
-                <span className="blankIcon">&nbsp;</span>
+                <Link to="/"><img alt="" src={clear} /></Link>
             }
         </header>
     )
