@@ -8,7 +8,7 @@ class Ranges extends Component {
         const {activeRange, dataList, loadRangeHandler} = this.props;
         return(
             <Fragment>
-                <Header title="All ranges" index={false}/>
+                <Header title="All ranges" page="ranges"/>
                 <section>
                     {
                        !dataList ? 'No ranges data' :

@@ -9,7 +9,7 @@ class ActiveList extends Component {
         let activeList = dataList && dataList.filter(value => value.range === activeRange)[0].words;
         return (
             <Fragment>
-                <Header title={activeRange} index={true}/>
+                <Header title={activeRange} page="index"/>
                 <section>
                     {!dataList ? 'Loading...' :
                         Object.keys(activeList).filter(value => !Object.keys(savedList).includes(value)).map((item) => (

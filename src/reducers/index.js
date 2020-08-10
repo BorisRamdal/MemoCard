@@ -17,6 +17,8 @@ export default function reducer(state = initialState, action) {
         case 'REMOVE_FROM_SAVELIST':
             const {[action.payload]: value, ...withoutword } = state.savedList;
             return {...state,  savedList: {...withoutword}};
+        case 'CLEAR_ALL':
+            return {...state,  savedList: {}};
         default:
             return state;
     }
