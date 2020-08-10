@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import ClearAll from '../../containers/clear_all';
 import add from './add.png';
 import menu from './menu.png';
 import back from './back.png';
-import clear from './clear.png';
 import './header.css';
 
 export default function Header(props) {
@@ -20,7 +20,7 @@ export default function Header(props) {
             break;
         case "saved":
             leftIcon = <Link to="/"><img alt="" src={back} /></Link>;
-            rightIcon = <img alt="" src={clear} />;
+            rightIcon = <ClearAll/>;
             break;
         default:
             leftIcon = <Link to="/ranges"><img alt="" src={menu} /></Link>;
