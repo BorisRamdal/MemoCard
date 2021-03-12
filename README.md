@@ -1,4 +1,4 @@
 # MemoCard (PWA)
-Over 3000+ EN cards sorted by frequency.
+Over 6000 English cards sorted by frequency.
 
 https://memocards.netlify.app

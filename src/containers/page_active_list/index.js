@@ -7,7 +7,7 @@ import Blank from '../../components/blank/blank';
 class ActiveList extends Component {
     render() {
         let {dataList, addToSaveList, activeRange, savedList} = this.props;
-        let activeList = dataList && dataList.filter(value => value.range === activeRange)[0].words;
+        let activeList = dataList && dataList.find(value => value.range === activeRange).words;
 
         let listwords = !dataList ? 'Loading...' : Object.keys(activeList).filter(value => !Object.keys(savedList).includes(value)).map((item) => (
             <Card word={item} translation={activeList[item]} key={item} addtosave={addToSaveList}/>
