@@ -1,0 +1,23 @@
+.blank-page {
+    display: flex;
+    height: calc(100vh - 90px);
+    justify-content: center;
+    flex-wrap: wrap;
+
+    span {align-self: flex-end;}
+
+    a {
+        align-self: flex-end;
+        border: 1px solid #dbdbdb;
+        background-color: #dbdbdb;
+        height: 50px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        font-size: 16px;
+        color: #323232;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+}

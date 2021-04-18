@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import {BrowserRouter as Router } from 'react-router-dom';
 import {save} from "redux-localstorage-simple";
 import reducer from './reducers/';
-import './index.css';
+import './index.scss';
 import Root from './containers/root/index'
 import * as serviceWorker from './serviceWorker';
 

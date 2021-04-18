@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './blank.css';
+import './blank.scss';
 
 export default function Blank() {
     return (

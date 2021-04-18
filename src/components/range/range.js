@@ -1,5 +1,5 @@
 import React from 'react';
-import './range.css';
+import './range.scss';
 
 export default function Range(props) {
     const {range, activerange, loadrange} = props;

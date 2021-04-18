@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
-import './card.css';
+import './card.scss';
 
 class Card extends Component {
     state = {

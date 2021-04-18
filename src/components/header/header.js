@@ -4,7 +4,7 @@ import ClearAll from '../../containers/clear_all';
 import add from './add.png';
 import menu from './menu.png';
 import back from './back.png';
-import './header.css';
+import './header.scss';
 
 export default function Header(props) {
     let leftIcon;
